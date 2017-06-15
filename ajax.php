@@ -2,11 +2,19 @@
 if (isset($_POST))
 {
 $email = $_POST["email"];
+$user = $_POST["user"];
+$pass = $_POST["pass"];
 $captcha = sha1($_POST["captcha"]);
 $numero_captcha = $_COOKIE["captcha"];
 if (!preg_match("/^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}$/", $email))
 {
 echo "<p style='color: red'>El formato de email es incorrecto</p>";
+}
+else if ( empty ( $user ) ) {
+    echo "<p style='color: red'>No dejar espacios en blanco</p>";
+}
+else if ( empty ( $pass ) ) {
+    echo "<p style='color: red'>No dejar espacios en blanco</p>";
 }
 else if ($captcha != $numero_captcha)
 {

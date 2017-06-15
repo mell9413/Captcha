@@ -32,6 +32,12 @@
 <td>Email:</td><td><input type="email" id="email" name="email"></td>
 </tr>
 <tr>
+<td>User:</td><td><input type="user" id="email" name="user"></td>
+</tr>
+<tr>
+<td>Password:</td><td><input type="password" id="email" name="pass"></td>
+</tr>
+<tr>
 <td>Captcha:</td><td><input type="text" id="captcha" name="captcha"></td>
 </tr>
 <tr><td></td><td><img src="captcha.php"><button id="actualizar_captcha" type="button">Actualizar</button></td></tr>
